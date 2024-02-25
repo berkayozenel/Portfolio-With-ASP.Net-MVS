@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+@Html.Partial("/Areas/Writer/Views/Default/HeadPartial.cshtml")
+<body>
+  <div class="container-scroller">
+    <!-- partial:../../partials/_navbar.html -->
+        @Html.Partial("/Areas/Writer/Views/Default/_NavbarPartial.cshtml")
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+    @Html.Partial("/Areas/Writer/Views/Default/_SideBarPartial.cshtml")
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+              @RenderBody()
+        </div>
+                @Html.Partial("/Areas/Writer/Views/Default/_FooterPartial.cshtml")
+      </div>
+    </div>
+  </div>
+    @Html.Partial("/Areas/Writer/Views/Default/_ScriptsPartial.cshtml")
+</body>
+</html>
